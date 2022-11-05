@@ -1,0 +1,11 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#caso{
+    height: 200px;
+    width: 300px;
+}
