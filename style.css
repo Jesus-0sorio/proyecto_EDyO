@@ -1,11 +1,43 @@
 main {
+    
+}
+
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10px 400px;
+    padding: 20px;
+    background-color: rgb(188, 30, 247);
+    border: 0;
+    border-radius: 15px;
+}
+
+.titule{
+    color: #fff;
+}
+
+textarea{
+    background-color: rgb(241, 241, 241);
 }
 
 #caso{
-    height: 200px;
-    width: 300px;
+    height: 300px;
+    width: 600px;
+}
+
+#resultado{
+    height: 400px;
+    width: 600px;
+}
+
+#enviar{
+    margin: 15px;
+    width: 150px;
+    height: 50px;
+    border-radius: 6px;
+    border: 0px;
+    background-color: rgb(4, 109, 252);
+    color: #fff;
 }
