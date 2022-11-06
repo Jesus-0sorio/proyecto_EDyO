@@ -53,7 +53,11 @@ export default function resolverCaso(caso) {
           };
         }
       }
-      db.push(`Día #${i+1}: La siesta es a las ${res.hora} y será de ${parseInt(res.resultado[0])} horas y ${res.resultado.split(':')[1]} minutos \n\n`);
+      if(parseInt(res.resultado.split(':')[0]) == 0){
+        db.push(`Día #${i+1}: La siesta es a las ${res.hora} y será de ${res.resultado.split(':')[1]} minutos \n\n`);
+      }else{
+        db.push(`Día #${i+1}: La siesta es a las ${res.hora} y será de ${parseInt(res.resultado.split(':')[0])} horas y ${res.resultado.split(':')[1]} minutos \n\n`);
+      }
     }
     return db; 
 }
