@@ -4,8 +4,8 @@ const calcularHora = (a, b) => {
   let minutos = a.slice(3, 5) - b.slice(3, 5);
   let res;
   if (minutos < 0) {
-      minutos += 60;
-      horas -= 1;
+    minutos += 60;
+    horas -= 1;
   }
   res = horas + ":" + minutos;
   return res;
@@ -27,20 +27,20 @@ const mayorHora = (a, b, hora) => {
       hora: hora.slice(6, 11),
     };
   }
-  return b
-}
+  return b;
+};
 
-export default function resolverCaso(caso) {    
-  caso  = caso.split('--')
+export default function resolverCaso(caso) {
+  caso = caso.split("--");
 
-  const db = []
+  const db = [];
   for (let i = 0; i < caso.length; i++) {
     let dia = caso[i].split(",").sort();
 
     // se compara compara con la primera diferencia horario
     let res = {
       resultado: calcularHora(dia[0].slice(0, 5), "08:00"),
-      hora: '08:00',
+      hora: "08:00",
     };
     let final = calcularHora("50:00", dia[dia.length - 1].slice(6, 11));
 
@@ -72,5 +72,5 @@ export default function resolverCaso(caso) {
       );
     }
   }
-  return db; 
+  return db;
 }
